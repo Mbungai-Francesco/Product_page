@@ -5,8 +5,144 @@
   box-sizing: border-box;
   font-family: 'Kumbh Sans';
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 body{
   height: 100vh;
+  padding: 0 10em;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid hsla(217, 9%, 45%, 0.3);
+  margin-bottom: 5em;
+}
+
+.logo_links{
+  display: flex;
+  justify-content: space-between;
+  /* width: 52%; */
+  align-items: center;
+}
+ul{
+  margin-left: 2em;
+  display: flex;
+  list-style: none;
+}
+li{
+  margin: 2.5em 1em;
+}
+.bucket_img{
+  display: flex;
+  align-items: center;
+}
+.bucket_img img{
+  margin-left: 2em;
+  width: 2.7em;
+  border-radius: 50%;
+}
+.bucket_img img:hover{
+  border: 2px solid hsl(26, 100%, 55%);
+}
+main{
+  display: flex;
+  justify-content: space-around;
+}
+.left{
+  /* background-color: azure; */
+  width: 35em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4em;
+}
+#mainPic{
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 2em;
+}
+.imgs{
+  display: flex;
+  justify-content: space-between;
+}
+.imgs img{
+  border-radius: 10px;
+  width: 4.9em;
+}
+.selected{
+  border: 2px solid hsl(26, 100%, 55%);
+  opacity: 40%;
+}
+.selected::after{
+  content: '';
+  width: inherit;
+  height: inherit;
+  background-color: pink;
+}
+.right{
+  width: 40%;
+  padding-top: 3em;
+}
+h5{
+  color: hsl(26, 100%, 55%);
+  margin-bottom: 1.5em;
+}
+.right h1{
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+}
+.right h1 + p{
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 2em;
+}
+.prices{
+  display: flex;
+  align-items: center;
+  margin-bottom: .5em;
+}
+.prices p{
+  font-size: 13px;
+  margin-left: 1em;
+  padding: 0.25em 0.5em;
+  background-color: hsla(26, 97%, 59%, 0.132);
+  border-radius: 5px;
+  font-weight: 700;
+  color: hsl(26, 100%, 55%);
+}
+del{
+  color: hsl(220, 14%, 75%);
+  font-family: 'Kumbh Sans SemiBold';
+  font-size: 14px;
+}
+.addCart{
+  display: flex;
+  margin-top: 2em;
+  width: 90%;
+  justify-content: space-between;
+}
+.add{
+  align-items: center;
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0.8em;
+  width: 10em;
+  border-radius: 10px;
+}
+.cart{
+  align-items: center;
+  background-color: hsl(26, 100%, 55%);
+  display: flex;
+  justify-content: center;
+  padding: 1em 0.8em;
+  width: 15em;
+  border-radius: 10px;
+  color: white;
+}
+.cart b{
+  margin-left: 1.5em;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
