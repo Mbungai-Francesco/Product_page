@@ -152,6 +152,9 @@ main{
   width: 35em;
   padding: 0 4em;
 }
+.left .changers{
+  display: none;
+}
 #mainPic{
   width: 100%;
   border-radius: 15px;
@@ -434,6 +437,9 @@ del{
     width: 100%;
     display: block;
     padding: 0;
+  }
+  .left .changers{
+    display: flex;
   }
   #mainPic{
     width: 100%;
