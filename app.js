@@ -14,6 +14,8 @@ const product2 = document.querySelector('#mainPic2')
 const close = $('#close')
 const light = $('.lightBox')
 const changers = document.querySelectorAll('.changers')
+const side = $('ul')
+const menu = $('#menu')
 // console.log(product)
 var items = 0
 var current = 1
@@ -88,7 +90,12 @@ del.click(function (){
 })
 
 product.addEventListener('click', function (){
-  document.querySelector('.lightBox').classList.remove('hidden')
+  const winWidth = window.innerWidth
+  if( winWidth > 500) {
+    const bodyheight = document.querySelector('body').style.height;
+    document.querySelector('.lightBox').style.height = bodyheight
+    document.querySelector('.lightBox').classList.remove('hidden')
+  }
 })
 
 close.click(function (){
@@ -120,3 +127,20 @@ for (let i = 0; i < changers.length; i++) {
     }
   })
 }
+
+menu.click(function (){
+  const winWidth = window.innerWidth
+  if( winWidth > 500) side.css('left','-3em')
+  else{
+    side.css('left','0em')
+    $('.changers').css('display','none')
+  }
+})
+$('ul svg').click(function (){
+  const winWidth = window.innerWidth
+  if( winWidth > 500) side.css('left','-13em')
+  else{
+    side.css('left','-10em')
+    $('.changers').css('display','flex')
+  }
+})

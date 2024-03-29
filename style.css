@@ -16,6 +16,7 @@ body{
   height: 100vh;
   padding: 0 10em;
   position: relative;
+  width: 100%;
 }
 header{
   border-bottom: 1px solid hsla(217, 9%, 45%, 0.3);
@@ -26,17 +27,22 @@ header{
   position: relative;
   width: 100%;
 }
-
 .logo_links{
   display: flex;
   justify-content: space-between;
   /* width: 52%; */
   align-items: center;
 }
+#menu{
+  display: none;
+}
 ul{
   margin-left: 2em;
   display: flex;
   list-style: none;
+}
+ul svg{
+  display: none;
 }
 li{
   border-bottom: 3px solid transparent;
@@ -50,6 +56,7 @@ li:hover{
 .bucket_img{
   display: flex;
   align-items: center;
+
 }
 .count{
   position: relative;
@@ -73,7 +80,7 @@ li:hover{
 .bucket_img img{
   border-radius: 50%;
   cursor: pointer;
-  margin-left: 2em;
+  margin-left: 1em;
   width: 2.7em;
 }
 .bucket_img img:hover{
@@ -138,15 +145,14 @@ li:hover{
 main{
   display: flex;
   justify-content: space-around;
+  padding-bottom: 2em;
 }
 .left{
   /* background-color: azure; */
   width: 35em;
-  display: flex;
-  flex-direction: column;
   padding: 0 4em;
 }
-.left #mainPic{
+#mainPic{
   width: 100%;
   border-radius: 15px;
   margin-bottom: 2em;
@@ -237,6 +243,7 @@ del{
   border-radius: 10px;
   color: white;
   box-shadow: 2px 5px 10px hsla(26, 100%, 55%, 0.562);
+  margin-left: 1em;
 }
 .cart:hover{
   opacity: 50%;
@@ -255,11 +262,13 @@ del{
   position: absolute;
   width: 100%;
   top: 0;
+  padding-bottom: 1em;
 }
 .box{
   display: flex;
   flex-direction: column;
   margin: 12vh auto;
+  margin-bottom: 0;
   width: 30%;
   position: relative;
 }
@@ -303,3 +312,160 @@ del{
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width : 1130px){
+  body{
+    padding: 0 5em;
+  }
+  .box{
+    width: 40%;
+  }
+}
+@media (max-width : 970px){
+  main{
+    padding-bottom: 2em;
+  }
+  .left{
+    padding: 0 1em;
+  }
+  .imgs img{
+    width: 4em;
+    margin-inline: 0.5em;
+  }
+  .right{
+    width: 75%;
+    padding: 0 2em;
+  }
+  .right h1{
+    font-size: 2em;
+    margin-bottom: 0.8em;
+  }
+  /* .box{
+    margin: 10vh auto;
+  } */
+}
+@media (max-width : 900px){
+  li{
+    font-size: 0.8em;
+  }
+}
+@media (max-width : 800px){
+  body{
+    height: fit-content;
+    padding: 0 3em;
+  }
+  main{
+    display: block;
+  }
+  .left{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #mainPic{
+    width: 80%;
+  }
+  .left .imgs{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .left .imgs img{
+    width: 5.5em;
+    margin: 0;
+  }
+}
+@media (max-width : 700px){
+  header{
+    height: fit-content;
+    padding-block: 1em;
+  }
+  #menu{
+    display: block;
+    margin-right: 1em;
+  }
+  ul{
+    background-color: white;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: -13em;
+    margin: 0;
+    width: 10em;
+    padding-left: 1em;
+    padding-top: 1em;
+    transition: 300ms;
+  }
+  ul svg{
+    display: block;
+    margin-bottom: 2em;
+  }
+  li{
+    border-bottom: 0;
+    border-right: 3px solid transparent;
+    padding: .5em 0;
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+  li:hover{
+    border-right-color: hsl(26, 100%, 55%);
+    color:hsl(220, 13%, 13%);
+  }
+  .bucket_img img{
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 1em;
+    width: 1.8em;
+  }
+}
+@media (max-width : 500px){
+  body{
+    padding: 0;
+    height: 100vh;
+  }
+  header{
+    padding: 1em;
+    margin-bottom: 0;
+  }
+  ul{
+    left: -10em;
+  }
+  .left{
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  #mainPic{
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 1em;
+  }
+  .imgs{
+    display: none;
+  }
+  .right{
+    width: 100%;
+    /* padding-right: 0; */
+    /* padding-left: ; */
+  }
+  .cartDrop{
+    width: 90%;
+    top: 5em;
+    left: 1em;
+  }
+  .right h1 + p{
+    margin-bottom: 1em;
+  }
+  .addCart{
+    margin-top: 1em;
+  }
+  .changers{
+    top: 25%;
+    width: 2.5em;
+  }
+  .changers:nth-child(1){
+    left: 1em;
+  }
+  .changers:nth-child(2){
+    right: 1em;
+  }
+}
