@@ -8,10 +8,29 @@ const addToCart = $('.cart')
 const amt = $('#amt')
 const del = $('.dropMain svg')
 const imgs = document.querySelectorAll('.imgs img')
+const imgs2 = document.querySelectorAll('.box .imgs img')
 const product = document.querySelector('#mainPic')
+const product2 = document.querySelector('#mainPic2')
+const close = $('#close')
+const light = $('.lightBox')
+const changers = document.querySelectorAll('.changers')
 // console.log(product)
 var items = 0
-var current = 0
+var current = 1
+
+const selected = () =>{
+  for (let i = 0; i < imgs.length; i++) {
+    imgs[i].classList.remove('selected')
+  }
+  imgs[current-1].classList.add('selected')
+  imgs2[current-1].classList.add('selected')
+}
+
+const replace = () =>{
+  selected()
+  product.setAttribute('src',`./images/image-product-${current}.jpg`)
+  product2.setAttribute('src',`./images/image-product-${current}.jpg`)
+}
 
 for (let i = 0; i < imgs.length; i++) {
   imgs[i].addEventListener('click',function (e){
@@ -21,7 +40,7 @@ for (let i = 0; i < imgs.length; i++) {
     e.target.classList.add('selected')
     if(current != e.target.getAttribute('src').slice(23,24)){
       current = Number(e.target.getAttribute('src').slice(23,24))
-      product.setAttribute('src',`./images/image-product-${current}.jpg`)
+      replace()
     }
   })
 }
@@ -62,7 +81,42 @@ addToCart.click(function (){
 
 del.click(function (){
   items = 0
+  addnum.text(items);
   num.text('');
-    notEmpty.css('display','none')
-    empty.css('display','block')
+  notEmpty.css('display','none')
+  empty.css('display','block')
 })
+
+product.addEventListener('click', function (){
+  document.querySelector('.lightBox').classList.remove('hidden')
+})
+
+close.click(function (){
+  light.addClass('hidden')
+})
+
+for (let i = 0; i < changers.length; i++) {
+  changers[i].addEventListener('click', function(e){
+    let val = Number(e.target.getAttribute('value'))
+    if(val == 1){
+      if(current != 4) {
+        current++
+        replace()
+      }
+      else{
+        current = 1
+        replace()
+      }
+    }
+    else{
+      if(current != 1) {
+        current--
+        replace()
+      }
+      else{
+        current = 4
+        replace()
+      }
+    }
+  })
+}

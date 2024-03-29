@@ -15,6 +15,7 @@ svg:hover{
 body{
   height: 100vh;
   padding: 0 10em;
+  position: relative;
 }
 header{
   border-bottom: 1px solid hsla(217, 9%, 45%, 0.3);
@@ -145,7 +146,7 @@ main{
   flex-direction: column;
   padding: 0 4em;
 }
-#mainPic{
+.left #mainPic{
   width: 100%;
   border-radius: 15px;
   margin-bottom: 2em;
@@ -246,6 +247,59 @@ del{
 }
 .cart b{
   margin-left: 1.5em;
+}
+.lightBox{
+  background-color:  hsla(0, 0%, 0%, 0.7);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  margin: 12vh auto;
+  width: 30%;
+  position: relative;
+}
+#close{
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+#close path{
+  fill: white;
+}
+#close:hover > path{
+  fill: hsl(26, 100%, 55%);
+}
+#mainPic2{
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 2em;
+}
+.changers{
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 40%;
+  width: 3em;
+}
+.changers:nth-child(1){
+  left: -1.5em;
+}
+.changers:nth-child(2){
+  right: -1.5em;
+}
+.changers:hover{
+  cursor: pointer;
+}
+.changers:hover > svg path{
+  stroke:hsl(26, 100%, 55%);
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
