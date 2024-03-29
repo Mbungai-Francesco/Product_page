@@ -428,6 +428,7 @@ del{
   }
   ul{
     left: -10em;
+    z-index: 4;
   }
   .left{
     width: 100%;
@@ -448,9 +449,10 @@ del{
     /* padding-left: ; */
   }
   .cartDrop{
-    width: 90%;
+    width: 92%;
     top: 5em;
     left: 1em;
+    z-index: 3;
   }
   .right h1 + p{
     margin-bottom: 1em;
@@ -461,6 +463,7 @@ del{
   .changers{
     top: 25%;
     width: 2.5em;
+    z-index: 1;
   }
   .changers:nth-child(1){
     left: 1em;

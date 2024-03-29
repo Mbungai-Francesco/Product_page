@@ -48,11 +48,10 @@ for (let i = 0; i < imgs.length; i++) {
 }
 
 cart.click(function() {
+  const winWidth = window.innerWidth
   $('.cartDrop').toggleClass('hidden');
+  // if( winWidth <= 500) $('.changers').toggleClass('hidden')
 })
-// $(document).click(function (){
-//   if($('.cartDrop').contain('hidden')) $('.cartDrop').addClass('hidden');
-// })
 
 $('.add').click(function (e){
   var val = Number(e.target.getAttribute('value'))
