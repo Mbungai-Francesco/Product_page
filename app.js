@@ -53,8 +53,9 @@ cart.click(function() {
   // if( winWidth <= 500) $('.changers').toggleClass('hidden')
 })
 
-$('.add').click(function (e){
-  var val = Number(e.target.getAttribute('value'))
+$('.operateBtns').click(function (e){
+  console.log(e);
+  var val = Number(e.currentTarget.getAttribute('value'))
   console.log(val);
   if(items >= 0){
     if(val == -1 && items ==0) {}

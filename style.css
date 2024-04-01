@@ -236,6 +236,10 @@ del{
   cursor: pointer;
   opacity: 50%;
 }
+.operateBtns{
+  padding: 0.2em;
+  /* background-color: black; */
+}
 .cart{
   align-items: center;
   background-color: hsl(26, 100%, 55%);
@@ -398,9 +402,16 @@ del{
     padding-top: 1em;
     transition: 300ms;
   }
+  #xclose{
+    padding: .5em;
+    width: fit-content;
+    height: fit-content;
+  }
   ul svg{
     display: block;
-    margin-bottom: 2em;
+  }
+  #xclose + li{
+    margin-top: 2em;
   }
   li{
     border-bottom: 0;
