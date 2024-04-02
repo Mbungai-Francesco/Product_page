@@ -71,6 +71,7 @@ cart.click(function() {
 
 ## Author
 
+- Portfolio - (https://mbungai-francesco.github.io/Portfolio/)
 - github - [Forche Mbungai Francesco](https://github.com/Mbungai-Francesco)
 - Frontend Mentor - [@Mbungai-Francesco](https://www.frontendmentor.io/profile/Mbungai-Francesco)
 - Twitter - [@MbungaiF](https://twitter.com/MbungaiF)
